@@ -1,0 +1,15 @@
+﻿<UserControl x:Class="Telebackup.Card"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Telebackup"
+             mc:Ignorable="d" 
+             d:DesignHeight="100" d:DesignWidth="300">
+    <Grid>
+        <Image x:Name="profileI" Source="..\Resources\user.png" HorizontalAlignment="Left" Height="80" VerticalAlignment="Top" Width="80" Margin="10,10,0,0"/>
+        <TextBlock x:Name="nameTB" HorizontalAlignment="Left" Height="31" Margin="105,10,0,0" TextWrapping="Wrap" Text="Conversation name" VerticalAlignment="Top" Width="185" FontSize="14.667"/>
+        <Button x:Name="backupB" Content="Make backup" HorizontalAlignment="Left" Margin="105,60,0,0" VerticalAlignment="Top" Width="185" RenderTransformOrigin="0.313,0.329" Height="30" Click="backupB_Click"/>
+
+    </Grid>
+</UserControl>

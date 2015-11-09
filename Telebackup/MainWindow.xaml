@@ -1,0 +1,19 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Telebackup"
+        xmlns:Transitions="clr-namespace:Transitions" x:Class="Telebackup.MainWindow"
+        mc:Ignorable="d"
+        Title="Telebackup" Height="379" Width="638" Loaded="Window_Loaded" ResizeMode="NoResize">
+    <Grid>
+
+        <Transitions:PageTransition Margin="0,0,0,48" x:Name="pageTransition"/>
+
+        <Button x:Name="backupsB" Content="Manage backups" Height="32" VerticalAlignment="Bottom" Margin="10,0,502,10" Click="backupsB_Click" />
+        <Button x:Name="next" Content="Next" Height="32" VerticalAlignment="Bottom" HorizontalAlignment="Center" Margin="0, 0, 0, 10" Width="80" Click="next_Click"/>
+
+        
+    </Grid>
+</Window>

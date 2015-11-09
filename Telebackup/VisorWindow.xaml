@@ -1,0 +1,27 @@
+﻿<Window x:Class="Telebackup.VisorWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Telebackup"
+        mc:Ignorable="d"
+        Title="Manage backups" Height="480" Width="640" ResizeMode="CanResizeWithGrip">
+    <Grid>
+        <ListBox x:Name="chats" HorizontalAlignment="Left" Width="128" BorderThickness="0" FontSize="13.333" BorderBrush="#FFCDCDCD" Background="{x:Null}" SelectionChanged="chats_SelectionChanged" />
+        <TabControl x:Name="tabControl" Margin="128,0,0,0" BorderThickness="1,1,0,0" Background="{x:Null}" BorderBrush="#FFE0E0E0">
+            <TabItem Header="Information">
+                <ScrollViewer x:Name="scrollViewer" HorizontalScrollBarVisibility="Visible" VerticalScrollBarVisibility="Disabled" PreviewMouseWheel="ScrollViewer_PreviewMouseWheel">
+                    <local:InformationControl x:Name="infoControl" Visibility="Hidden"/>
+                </ScrollViewer>
+            </TabItem>
+            <TabItem Header="Chat">
+                <Grid/>
+            </TabItem>
+        </TabControl>
+
+        <Grid x:Name="loadingG"  Background="#CCF9F9F9" Margin="133,25,0,0" Opacity="0" Visibility="Hidden">
+            <Label FontSize="32" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" />
+        </Grid>
+
+    </Grid>
+</Window>

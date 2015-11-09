@@ -1,0 +1,25 @@
+﻿<UserControl x:Class="Telebackup.CalendarDays"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:local="clr-namespace:Telebackup"
+             mc:Ignorable="d" d:DesignWidth="300" Height="281.25">
+    <Grid Background="#FFF5F3F3">
+        <Grid x:Name="daysGrid" Margin="0,32,0,27" MouseLeave="daysGrid_MouseLeave"/>
+        <Label x:Name="info" Content="Hover a day to see message count" HorizontalAlignment="Left" Margin="0,254,0,1" Width="300" Background="#FFF5FFFF"/>
+        <Button x:Name="monthB" Content="Month" Margin="32,0,30,0" VerticalAlignment="Top" Height="32" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" BorderThickness="0" Background="#FF768FFF" Click="monthB_Click"/>
+        <Button x:Name="prevMonth" HorizontalAlignment="Left" VerticalAlignment="Top" Width="32" Height="32" BorderThickness="0" Background="#FF768FFF" Click="prevMonth_Click" >
+            <Canvas Height="30" Width="30">
+                <Line Stroke="Black" X1="8" Y1="16" X2="20" Y2="8" StrokeThickness="1" />
+                <Line Stroke="Black" X1="8" Y1="16" X2="20" Y2="24" StrokeThickness="1" />
+            </Canvas>
+        </Button>
+        <Button x:Name="nextMonth" VerticalAlignment="Top" Height="32" BorderThickness="0" HorizontalAlignment="Right" Width="32" Background="#FF768FFF" Click="nextMonth_Click" >
+            <Canvas Height="30" Width="30">
+                <Line Stroke="Black" X1="8" Y1="8" X2="20" Y2="16" StrokeThickness="1" />
+                <Line Stroke="Black" X1="8" Y1="24" X2="20" Y2="16" StrokeThickness="1" />
+            </Canvas>
+        </Button>
+    </Grid>
+</UserControl>

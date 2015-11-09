@@ -1,0 +1,30 @@
+﻿<UserControl x:Class="Telebackup.Steps.Step4"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Telebackup.Steps"
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="630" Loaded="UserControl_Loaded">
+    <Grid>
+        <Label HorizontalAlignment="Center" Height="44" Margin="10,10,10,0" HorizontalContentAlignment="Center" VerticalContentAlignment="Bottom" Content="Step 4: Save and export" VerticalAlignment="Top" Width="610" FontSize="18.667"/>
+        <TextBlock HorizontalAlignment="Left" Height="45" Margin="315,59,0,0" TextWrapping="Wrap" Text="You can export the backup as HTML (.html) to display it in any web browser or as as plain text file (.txt)" VerticalAlignment="Top" Width="305"/>
+        <Grid x:Name="cardGrid" HorizontalAlignment="Left" Height="140" Margin="10,85,0,0" VerticalAlignment="Top" Width="300"/>
+        <Button x:Name="exportHtmlB" Content="Export as HTML" HorizontalAlignment="Left" Height="34" Margin="381,256,0,0" VerticalAlignment="Top" Width="117" Click="exportHtmlB_Click"/>
+        <Button x:Name="exportTextB" Content="Export as plain text" HorizontalAlignment="Left" Height="34" Margin="503,256,0,0" VerticalAlignment="Top" Width="117" Click="exportTextB_Click"/>
+        <Button x:Name="logoutB" Content="Logout and exit" HorizontalAlignment="Left" Height="34" Margin="10,256,0,0" VerticalAlignment="Top" Width="117" Click="logoutB_Click"/>
+
+        <Button x:Name="exportHtmlDifferentB" Content="Export as HTML in different files" HorizontalAlignment="Left" Height="34" Margin="173,256,0,0" VerticalAlignment="Top" Width="203" Click="exportHtmlDifferentB_Click"/>
+        <GroupBox Header="Chat information:" HorizontalAlignment="Left" Margin="315,104,0,0" VerticalAlignment="Top" Height="121" Width="305">
+            <Grid>
+                <Label Content="Messages sent/total messages:" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top"/>
+                <Label Content="Day with more messages:" HorizontalAlignment="Left" Margin="10,41,0,0" VerticalAlignment="Top" RenderTransformOrigin="-1.002,0.192"/>
+                <Label Content="Total character count:" HorizontalAlignment="Left" Margin="10,72,0,0" VerticalAlignment="Top" RenderTransformOrigin="-1.002,0.192"/>
+                <TextBlock x:Name="sentTotalTB" HorizontalAlignment="Left" Margin="188,15,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="95" Text="Counting..."/>
+                <TextBlock x:Name="mostDayTB" HorizontalAlignment="Left" Margin="159,46,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="124" Text="Counting..."/>
+                <TextBlock x:Name="charactersTB" HorizontalAlignment="Left" Margin="138,77,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="145" Text="Counting..."/>
+            </Grid>
+        </GroupBox>
+
+    </Grid>
+</UserControl>

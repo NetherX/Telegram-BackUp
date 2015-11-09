@@ -1,0 +1,25 @@
+﻿<UserControl
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Telebackup"
+             xmlns:Charts="clr-namespace:Charts" x:Class="Telebackup.InformationControl"
+             mc:Ignorable="d" Height="333" Width="733">
+    <Grid>
+        <local:CalendarDays x:Name="calendar" HorizontalAlignment="Left" Margin="10,42,0,0" VerticalAlignment="Top" Width="248" Height="281"/>
+
+        <Charts:ColumnChart x:Name="chart" Height="261" Margin="283,42,10,0" VerticalAlignment="Top" />
+        <RadioButton x:Name="msgsRB" Content="Show messages sent" HorizontalAlignment="Left" Margin="283,308,0,0" VerticalAlignment="Top" IsChecked="True" Checked="typeRB_Checked"/>
+        <RadioButton x:Name="wordsRB" Content="Show words sent" HorizontalAlignment="Left" Margin="451,308,0,0" VerticalAlignment="Top" Checked="typeRB_Checked"/>
+        <RadioButton x:Name="charsRB" Content="Show characters sent" HorizontalAlignment="Left" Margin="592,308,0,0" VerticalAlignment="Top" Checked="typeRB_Checked"/>
+
+        <Label Content="Information date range:" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top"/>
+        <Label Content="From" HorizontalAlignment="Left" Margin="150,10,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.243,0.115"/>
+        <DatePicker x:Name="fromDateDT" HorizontalAlignment="Left" Margin="192,12,0,0" VerticalAlignment="Top" Width="120" MaxWidth="120" SelectedDateChanged="dateRangeChanged"/>
+        <Label Content="to" HorizontalAlignment="Left" Margin="314,10,0,0" VerticalAlignment="Top"/>
+        <DatePicker x:Name="toDateDT" HorizontalAlignment="Left" Margin="335,12,0,0" VerticalAlignment="Top" Width="120" MaxWidth="120" SelectedDateChanged="dateRangeChanged" />
+        <Button x:Name="resetRange" Content="Reset" HorizontalAlignment="Left" Margin="460,11,0,0" VerticalAlignment="Top" Width="52" Height="26" Click="resetRange_Click"/>
+        <Label x:Name="totalL" Content="Total: Unknown" HorizontalAlignment="Left" Margin="562,10,0,0" VerticalAlignment="Top" Width="161"/>
+    </Grid>
+</UserControl>
