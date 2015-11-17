@@ -13,3 +13,6 @@ Please keep in mind this program is still in an *early beta stage* and beta test
 
 ## Credits
 Thanks to @sochix for his repository TLSharp. This uses his code, with some other implementations, in order to download the chats.
+
+
+NetherX - Pizok.Com
